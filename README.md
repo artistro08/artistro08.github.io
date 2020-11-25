@@ -4,7 +4,7 @@ This is a bible for how OctoberCMS should be handled.
 
 
 
-> Use this documentation as a strict guide on how code should be managed in OctoberCMS. This documentation is provided to make sure code can be created quicly and efficiently
+> Use this documentation as a strict guide on how code should be managed in OctoberCMS. This documentation is provided to make sure code can be created quickly and efficiently
 
 This guide assumes that you already have a local or virtual server setup.
 
