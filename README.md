@@ -105,7 +105,7 @@ If you have an existing repository that you are setting up, you'll need to do th
 git clone git@github.com:username/repository.git
 ````
 
-if you're using HTTPS:
+if you are using HTTPS:
 
 ``` bash
 git clone https://github.com/username/repository.git
@@ -134,20 +134,20 @@ APP_URL=example.test # this depends on the repository
 ```
 
 Change it to whatever you need it to be
-``` bash
+``` env
 APP_URL=devingreen.test 
 ```
 
 #### Delete the value for `APP_KEY`. 
 With the `.env` file still open, find this line 
 
-``` bash
+``` env
 APP_KEY=Change me!!!
 ```
 
 Clear the value for this line. We will generate it later. 
 
-``` bash
+``` env
 APP_KEY=
 ```
 
@@ -161,7 +161,7 @@ mysql -u root -p database_name < database_dump.sql # replace appropiate values
 #### Set the values of `DB_*` to the database you imported 
 In your `.env` file, find the following lines:
 
-``` bash
+``` env
 DB_DATABASE=example_database
 DB_USERNAME=root
 DB_PASSWORD=
@@ -169,7 +169,7 @@ DB_PASSWORD=
 
 update the following lines to the database that you've imported to. 
 
-``` bash
+``` env
 DB_DATABASE=devingreen
 DB_USERNAME=root
 DB_PASSWORD=SpidermanLivesAgain # your root password, or whatever you've setup on your system
