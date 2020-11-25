@@ -18,7 +18,7 @@ There are two ways to setup your repository for OctoberCMS. From scratch and set
 
 > To setup a new repository you'll be using [:fab fa-github: offline/oc-bootstrapper](https://github.com/OFFLINE-GmbH/oc-bootstrapper). Install this package via composer globally from the [documentation](https://github.com/OFFLINE-GmbH/oc-bootstrapper/blob/develop/README.md)
 
-### Git Setup
+#### Git Setup
 To get started, we will start a new git repository by running the following code:
 
 ``` bash
@@ -33,7 +33,7 @@ git push -u origin master
 
 The above will create a `october.yaml` file for setup, create a new branch, and push it to your git provider. 
 
-### OctoberCMS Setup
+#### OctoberCMS Setup
 Once you've setup the repository, you'll need to add a config to the `october.yaml` file you created in the first step. Use this as a base. <br/>
 
 ``` yaml
