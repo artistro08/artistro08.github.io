@@ -204,10 +204,10 @@ Layouts are a combination of partials that make up the theme. We create layouts 
 
 The `assets` folder is where we will store all of our `#️⃣css`, `📄js`, and `🖼️img` files. These folders will style the website and create the theme so it's imperative that we keep them small and easy to navigate. 
 
-### `CSS`
-The `css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`.
+### `#️⃣CSS`
+The `📁css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`.
 
-The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. If this file does not exist, you will need to create it. 
+>The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. If this file does not exist, you will need to create it. 
 
 If you need to add other modules on the site that require a `#️⃣.css` file, add them here.
 For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `#️⃣.css` file in this folder.
@@ -218,10 +218,45 @@ For example, if you would like to add [jquery.fancybox](https://fancyapps.com/),
     └── #️⃣ jquery.fancybox.min.css      <!-- fancybox css file -->
 ```
 
-Be sure to call it in your `head.htm` partial as well. 
+Be sure to call it in your `🟧head.htm` partial as well. 
 
 ``` twig
 ...
 <link rel="stylesheet" href="{{ 'assets/css/jquery.fancybox.min.css'| theme }}>
 ...
+```
+
+### `📄JS`
+The `📁js` folder should contain one main javascript file for the entire theme. This file name is called `📄script.js`.
+
+>The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. If this file does not exist, you will need to create it. 
+
+If you need to add other modules on the site that require a `📄.js` file, add them here.
+For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `📄.js` file in this folder.
+
+``` html
+└── 📁 css
+    └── 📄 script.js                   <!-- main js file. do not change name. -->
+    └── 📄 jquery.fancybox.min.js      <!-- fancybox js file -->
+```
+
+Be sure to call it in your `🟧foot.htm` partial as well. 
+
+``` twig
+...
+<script src="{{ 'assets/js/jquery.fancybox.min.js'|theme }}>
+...
+```
+
+### `🖼️IMG`
+The `📁img` folder should contain all of the images associated with the theme.
+
+> This should not contain images that can be dynamically generated. More specifically, this folder should contain images that are being rendered in each partial, and page.
+
+Example of the image file structure
+
+``` html
+└── 📁 img
+    └── 🖼️ logo.png
+    └── 🖼️ hero.jpg
 ```
