@@ -21,7 +21,7 @@ documentation on how to use it via command line can be found at [:fab fa-github:
 
 ### Gitflow for VS Code
 
-You can find the following extension with documentation [here](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow).
+You can find the following extension with documentation [here :fas fa-external-link-alt:](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow).
 
 ## Creating Features
 

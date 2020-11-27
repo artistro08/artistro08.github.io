@@ -6,9 +6,7 @@ This is a bible for how OctoberCMS should be handled.
 
 !> Use this documentation as a strict guide on how code should be managed in OctoberCMS. This documentation is provided to make sure code can be created quickly and efficiently when working with others.
 
-This guide assumes that you already have a local or virtual server setup.
-
- If you do not, I recommend you get [:fab fa-github:laravel/valet](https://github.com/laravel/valet) setup or [:fab fa-github:cpriego/valet-linux](https://github.com/cpriego/valet-linux) to get a local server started.
+?> This guide assumes that you already have a local or virtual server setup. If you do not, I recommend you get [:fab fa-github:laravel/valet](https://github.com/laravel/valet) setup or [:fab fa-github:cpriego/valet-linux](https://github.com/cpriego/valet-linux) to get a local server started.
 
 ## Setting Up
 
@@ -16,7 +14,7 @@ There are two ways to setup your repository for OctoberCMS. From scratch and set
 
 ### From Scratch
 
-?> To setup a new repository you'll be using [:fab fa-github: offline/oc-bootstrapper](https://github.com/OFFLINE-GmbH/oc-bootstrapper). Install this package via composer globally from the [documentation](https://github.com/OFFLINE-GmbH/oc-bootstrapper/blob/develop/README.md)
+?> To setup a new repository you'll be using [:fab fa-github: offline/oc-bootstrapper](https://github.com/OFFLINE-GmbH/oc-bootstrapper). Install this package via composer globally from the [documentation :fas fa-external-link-alt:](https://github.com/OFFLINE-GmbH/oc-bootstrapper/blob/develop/README.md)
 
 #### Git Setup
 To get started, we will start a new git repository by running the following code:
@@ -129,7 +127,7 @@ cp .env.example .env
 #### Set the `APP_URL` 
 Open the `.env` file you just created with you favorite text editor and find this line
 
-``` bash
+``` env
 APP_URL=example.test # this depends on the repository
 ```
 

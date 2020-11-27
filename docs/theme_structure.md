@@ -2,10 +2,10 @@
 The following is an extensive guide on how themes should work in OctoberCMS
 
 ?>This guide assumes that you have a basic understanding of html, css, twig, and OctoberCMS theming. If you do not, I suggest you read the documentation below.
-<br><br> [MDN Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-<br>[MDN Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
-<br> [Symphony's Documentation on Twig](https://twig.symfony.com/doc/2.x/)
-<br> [OctoberCMS Theming Docs](https://octobercms.com/docs/cms/themes)
+<br><br> [MDN Docs on HTML :fas fa-external-link-alt:](https://developer.mozilla.org/en-US/docs/Web/HTML)
+<br>[MDN Docs on CSS :fas fa-external-link-alt:](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+<br> [Symphony's Documentation on Twig :fas fa-external-link-alt:](https://twig.symfony.com/doc/2.x/)
+<br> [OctoberCMS Theming Docs :fas fa-external-link-alt:](https://octobercms.com/docs/cms/themes)
 
 ## Initial Structure
 When  creating themes in OctoberCMS, use this structure:
@@ -133,7 +133,7 @@ To render those files, you will need to use the `{% content %}` tag like so:
 </div>
 ```
 
-?> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation](https://octobercms.com/docs/markup/tag-content)
+?> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation :fas fa-external-link-alt:](https://octobercms.com/docs/markup/tag-content)
 
 
 ## Partials
@@ -315,7 +315,7 @@ layout = "default"
 ```
 
 
-!> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
+!> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin :fas fa-external-link-alt:](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
 
 
 

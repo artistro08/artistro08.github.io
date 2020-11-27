@@ -2,7 +2,7 @@
 
 This page is documentation on how naming conventions and coding structure should work out. Refer to each section for information on everything.
 
-?> This documentations uses case styling. Read more about them here: [Case Styles](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
+?> This documentations uses case styling. Read more about them here: [Case Styles :fas fa-external-link-alt:](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
 
 ## HTML
 
