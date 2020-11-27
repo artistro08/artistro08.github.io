@@ -14,7 +14,7 @@ This guide assumes that you already have a local or virtual server setup.
 
 There are two ways to setup your repository for OctoberCMS. From scratch and setting up an existing one. 
 
-### From Scratch Method
+### From Scratch
 
 ?> To setup a new repository you'll be using [:fab fa-github: offline/oc-bootstrapper](https://github.com/OFFLINE-GmbH/oc-bootstrapper). Install this package via composer globally from the [documentation](https://github.com/OFFLINE-GmbH/oc-bootstrapper/blob/develop/README.md)
 
