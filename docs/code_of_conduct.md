@@ -91,7 +91,7 @@ Following the [GitFlow](/docs/gitflow.md) structure, you will be committing code
 
 !> If you are 100% sure your feature is done, finish it, and move your Trello card into the "In Review" List. 
 
-### Next Steps
+## Next Steps
 
 Now that you're up to speed on the Code of Conduct, you should be good to go to start theming! Be sure to check out the Resources page too for documentation on plugins we always use, tips, and tricks. 
 
