@@ -42,7 +42,7 @@ Below is a explanation on what files each folder will have and how each folder w
 
 The `📁assets` folder is where we will store all of our `#️⃣css`, `📄js`, and `🖼️img` files. The files in these folders will style and create the functionality of theme so it's imperative that we keep the file count small and easy to navigate. 
 
-### `📁CSS`
+### `CSS`
 The `📁css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`. If this file does not exist, you will need to create it. 
 
 >The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. 
@@ -64,7 +64,7 @@ Be sure to call it in your `🟧head.htm` partial as well.
 ...
 ```
 
-### `📁JS`
+### `JS`
 The `📁js` folder should contain one main javascript file for the entire theme. This file name is called `📄script.js`. If this file does not exist, you will need to create it. 
 
 >The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. 
@@ -86,7 +86,7 @@ Be sure to call it in your `🟧foot.htm` partial as well.
 ...
 ```
 
-### `📁IMG`
+### `IMG`
 The `📁img` folder should contain all of the images associated with the theme.
 
 > This should not contain images that can be dynamically generated. More specifically, this folder should contain images that need to be rendered in each partial, and page directly.
@@ -158,7 +158,7 @@ Here's an example of the folder structure below.
 >
 >If the partial does not meet any of these requirements, they need to be implemented per page and must be included in a folder. The folder name should be related to the function of the partial.
 
-### `🟧head.htm` Partial
+### `head.htm` Partial
 
 This partial will contain all the code that goes in the `<head>` tag. This partial will __not__ contain the `<head>` tag tho. Example below:
 
@@ -185,7 +185,7 @@ More info here: https://octobercms.com/docs/markup/filter-theme#combine-css-java
 <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/img/favicon-16x16.png'|theme }}">
 ```
 
-### `🟧header.htm` Partial
+### `header.htm` Partial
 
 This partial will contain the navigation of the site, typically right after the opening `<body>` tag depending on the theme. Example below:
 
@@ -220,7 +220,7 @@ You may notice that this template contains twig code referencing to a page. This
 
 The navigation style will vary from theme to theme, so change this code accordingly.
 
-### `🟧foot.htm` Partial
+### `foot.htm` Partial
 This partial will contain all of the code needed before the closing `<body>` tag. Usually javascript. Example below: 
 
 ``` twig
@@ -242,7 +242,7 @@ This partial will contain all of the code needed before the closing `<body>` tag
 {% scripts %}
 ```
 
-### `🟧footer.htm` Partial
+### `footer.htm` Partial
 
 This partial will contain the footer code for the site. This code will be presented at the bottom of the page after all the content but before the `🟧foot.htm` partial. Example below
 
