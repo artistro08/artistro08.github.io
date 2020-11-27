@@ -1,11 +1,11 @@
 # Theme Structure
 The following is an extensive guide on how themes should work in OctoberCMS
 
->This guide assumes that you have a basic understanding of html, css, twig, and OctoberCMS theming. If you do not, I suggest you read the following:
-> - [MDN Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-> - [MDN Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
-> - [Symphony's Documentation on Twig](https://twig.symfony.com/doc/2.x/)
-> - [OctoberCMS Theming Docs](https://octobercms.com/docs/cms/themes)
+?>This guide assumes that you have a basic understanding of html, css, twig, and OctoberCMS theming. If you do not, I suggest you read the documentation below.
+<br><br> [MDN Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+<br>[MDN Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
+<br> [Symphony's Documentation on Twig](https://twig.symfony.com/doc/2.x/)
+<br> [OctoberCMS Theming Docs](https://octobercms.com/docs/cms/themes)
 
 ## Initial Structure
 When  creating themes in OctoberCMS, use this structure:
@@ -35,7 +35,7 @@ When  creating themes in OctoberCMS, use this structure:
           └── 🟧 footer.htm              <!-- footer for pages. do not change name. -->
 ```
 
->Note: this is a strict guideline. Do not change the names of these files or folders under any circumstance. These are put in place to make sure everyone knows where the files are and how to get to them, thus creating a workable, consistent coding environment.
+!>Note: this is a strict guideline. Do not change the names of these files or folders under any circumstance. These are put in place to make sure everyone knows where the files are and how to get to them, thus creating a workable, consistent coding environment.
 
 Below is a explanation on what files each folder will have and how each folder will be structured.
 
@@ -46,7 +46,7 @@ The `📁assets` folder is where we will store all of our `#️⃣css`, `📄js`
 ### `CSS`
 The `📁css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`. If this file does not exist, you will need to create it. 
 
->The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. 
+!>The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. 
 
 If you need to add other modules on the site that require a `#️⃣.css` file, add them here.
 For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `#️⃣.css` file in this folder.
@@ -68,7 +68,7 @@ Be sure to call it in your `🟧head.htm` partial as well.
 ### `JS`
 The `📁js` folder should contain one main javascript file for the entire theme. This file name is called `📄script.js`. If this file does not exist, you will need to create it. 
 
->The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. 
+!>The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. 
 
 If you need to add other modules on the site that require a `📄.js` file, add them here.
 For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `📄.js` file in this folder.
@@ -90,7 +90,7 @@ Be sure to call it in your `🟧foot.htm` partial as well.
 ### `IMG`
 The `📁img` folder should contain all of the images associated with the theme.
 
-> This should not contain images that can be dynamically generated. More specifically, this folder should contain images that need to be rendered in each partial, and page directly.
+?> This should not contain images that can be dynamically generated. More specifically, this folder should contain images that need to be rendered in each partial, and page directly.
 
 Example of the image file structure
 
@@ -114,13 +114,12 @@ Example of the image file structure
           └── 🟧about-description.htm 
 ```
 
-> Note: `🟧 content` files will not contain any HTML classes, divs, special html tags (e.g. `<article>`, `<section>`, etc). The only tags that these files are allowed to have are as follows:
->
-> - `<p>`
-> - `<ul>`
-> - `<li>`
-> - `<span>`
-> - `<blockquote>`
+!> Note: `🟧 content` files will not contain any HTML classes, divs, special html tags (e.g. `<article>`, `<section>`, etc). The only tags that these files are allowed to have are as follows:
+<br><br> `<p>`
+<br> `<ul>`
+<br> `<li>`
+<br> `<span>`
+<br> `<blockquote>`
 
 ### Rendering
 To render those files, you will need to use the `{% content %}` tag like so:
@@ -134,7 +133,7 @@ To render those files, you will need to use the `{% content %}` tag like so:
 </div>
 ```
 
-> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation](https://octobercms.com/docs/markup/tag-content)
+?> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation](https://octobercms.com/docs/markup/tag-content)
 
 
 ## Partials
@@ -153,11 +152,10 @@ Here's an example of the folder structure below.
     └── 🟧 footer.htm  <!-- footer code for pages. do not change name. -->
 ```
 
->The name of these files __will not be changed__ and we will not add any other partials here unless they meet the following requirements:
-> - The `partial` is going to be a global component (e.g. custom alerts.)
-> - The `partial` will be used across the entire website.
->
->If the partial does not meet any of these requirements, they need to be implemented per page and must be included in a folder. The folder name should be related to the function of the partial.
+!>The name of these files __will not be changed__ and we will not add any other partials here unless they meet the following requirements:
+<br><br>The `partial` is going to be a global component (e.g. custom alerts.)
+<br>The `partial` will be used across the entire website.
+<br><br>If the partial does not meet any of these requirements, they need to be implemented per page and must be included in a folder. The folder name should be related to the function of the partial.
 
 ### `head.htm` Partial
 
@@ -303,7 +301,7 @@ Layouts are a combination of partials that make up the theme. We create layouts 
 </html>
 ```
 
-> Note, Use this a base on rendering layouts. Add partial where needed. Do not add direct code here. 
+?> Note: Use this a base on rendering layouts. Add partial where needed. Do not add direct code here. 
 
 ### Rendering
 In order to render the layout, you'll need to assign the layout to the page you're work. Example below:
@@ -317,7 +315,7 @@ layout = "default"
 ```
 
 
-> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
+!> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
 
 
 
@@ -325,4 +323,4 @@ layout = "default"
 
 now that you have a general idea on how our themes will be structured, lets move on to the Code of Conduct
 
-[Code of Conduct :fas fa-arrow-right:](/code_of_conduct.md)
+[Code of Conduct :fas fa-arrow-right:](/docs/code_of_conduct.md)

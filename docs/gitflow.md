@@ -30,4 +30,4 @@ If you're working on a feature that does not have a card, create a clear and con
 ## Next Steps
 Now that you have gitflow setup, it's time to get into the code structure.
 
-[Code of Conduct :fas fa-arrow-right:](code_of_conduct.md)
+[Code of Conduct :fas fa-arrow-right:](/docs/code_of_conduct.md)
