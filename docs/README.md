@@ -10,7 +10,7 @@ This is a bible for how OctoberCMS should be handled.
 
 ## Setting Up
 
-There are two ways to setup your repository for OctoberCMS. From scratch and setting up an existing one. 
+There are two ways to setup your repository for OctoberCMS. You can start from scratch or you can setup an existing one. 
 
 ### From Scratch
 
