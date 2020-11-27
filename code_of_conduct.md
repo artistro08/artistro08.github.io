@@ -31,6 +31,10 @@ CSS styles in the the file should be structured as per the standard. example bel
 .hero .about-hero {
     /* extra styles here */
 }
+
+#component {
+    /* more styles */
+}
 ```
 
 > It is encouraged, but not required that you leave comments in the css file for quick references in the code editor. 
@@ -49,6 +53,8 @@ Example of the folder structure below:
     └── 📁 pluginName
          └── 🟧default.htm 
 ```
+
+### Rendering
 
 Each component will have an alias attached to the file. Example below:
 
