@@ -1,15 +1,15 @@
 # Code of Conduct
 
-This page is documentation on how naming conventions and coding structure should work out. Refer to each section for information on everything.
+This page contains documentation on how naming conventions and coding structure should work out. Refer to each section for information.
 
 ?> This documentations uses case styling. Read more about them here: [Case Styles :fas fa-external-link-alt:](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
 
 ## HTML
 
 ### Classes
-The naming conventions for classes in HTML have to make sense to the component/div you're designing. For example `class="hero"` should __ONLY__ target the `hero` div and other divs like it. Creating a combo class for `hero` on other pages works as well. for example `class="hero about-hero"`. 
+The naming conventions for classes in HTML have to make sense to the component/div you're designing. For example `class="hero"` should __ONLY__ target the `hero` div and other divs like it. Creating a combo class for `hero` on other pages works as well. For example `class="hero about-hero"`. 
 
-!> All classes will have kebab style casings. (e.g. hero-title)
+!> All classes will have kebab style casings. (e.g. `hero-title`)
 
 
 ### IDs 
