@@ -1,4 +1,4 @@
-# OctoberCMS Stack Documentation
+# Getting Started
 
 This is a bible for how OctoberCMS should be handled. 
 

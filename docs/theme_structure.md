@@ -114,7 +114,7 @@ Example of the image file structure
           └── 🟧about-description.htm 
 ```
 
-!> Note: `🟧 content` files will not contain any HTML classes, divs, special html tags (e.g. `<article>`, `<section>`, etc). The only tags that these files are allowed to have are as follows:
+!> Note: `🟧 content` files will not contain any HTML classes, ids, divs, special html tags (e.g. `<article>`, `<section>`, etc). The only tags that these files are allowed to have are as follows:
 <br><br> `<p>`
 <br> `<ul>`
 <br> `<li>`
