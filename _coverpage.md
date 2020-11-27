@@ -2,7 +2,7 @@
 
 ![logo](_media/logo.png)
 
-# OctoberCMS Stack Documentation <small>1.2.3</small>
+# OctoberCMS Stack Documentation <small>1.3.0</small>
 
 > A guideline on how theming will work based on our company policies. 
 
