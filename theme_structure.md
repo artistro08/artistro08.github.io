@@ -1,10 +1,11 @@
 # Theme Structure
 The following is an extensive guide on how themes should work in OctoberCMS
 
->This guide assumes that you have a basic understanding of html, twig, and OctoberCMS theming. If you do not, I suggest you read the following:
-> - [MDN Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) 
+>This guide assumes that you have a basic understanding of html, css, twig, and OctoberCMS theming. If you do not, I suggest you read the following:
+> - [MDN Docs on HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+> - [MDN Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) 
 > - [Symphony's Documentation on Twig](https://twig.symfony.com/doc/2.x/)
-> - [OctoberCMS Themeing Docs](https://octobercms.com/docs/cms/themes)
+> - [OctoberCMS Theming Docs](https://octobercms.com/docs/cms/themes)
 
 ## Initial Structure
 When  creating themes in OctoberCMS, use this structure:
@@ -107,10 +108,10 @@ Example of the image file structure
 └── 📁 content                      
     ├── 📁 home
     |     ├── 🟧hero-title.htm 
-    |     └── 🟧hero-descrption.htm 
+    |     └── 🟧hero-description.htm 
     └── 📁 about
           ├── 🟧about-title.htm 
-          └── 🟧about-descrption.htm 
+          └── 🟧about-description.htm 
 ```
 
 > Note: `🟧 content` files will not contain any HTML classes, divs, special html tags (e.g. `<article>`, `<section>`, etc). The only tags that these files are allowed to have are as follows:
@@ -133,7 +134,7 @@ To render those files, you will need to use the `{% content %}` tag like so:
 </div>
 ```
 
-> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Ducmentation](https://octobercms.com/docs/markup/tag-content)
+> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation](https://octobercms.com/docs/markup/tag-content)
 
 
 ## Partials
@@ -231,7 +232,7 @@ This partial will contain all of the code needed before the closing `<body>` tag
 <script src="{{ 'assets/bootstrap/js/bootstrap.min.js'|theme }}"></script>
 
 {# main script file. Do not change #}
-<script src="{{ 'assets/js/scriptjs'|theme }}"></script>
+<script src="{{ 'assets/js/script.js'|theme }}"></script>
 
 {# reference to the OctoberCMS Framework. #}
 {# should be only included ONCE and after #}
@@ -316,7 +317,7 @@ layout = "default"
 ```
 
 
-> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin](https://octobercms.com/plugin/rainlab-pages#documentation) for exapmle)
+> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
 
 
 

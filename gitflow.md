@@ -21,6 +21,12 @@ documentation on how to use it via command line can be found at [:fab fa-github:
 
 You can find the following extension with documentation [here](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow).
 
+## Creating Features
+
+As I said before, features are to be created for every card you're working on in Trello. For example, If you have a card that is titled "Fix Navigation Styling On Mobile", You' create a feature called `feature/fix-navigation-scrolling-on-mobile`. Feature names are to be close to the counterpart card as possible.
+
+If you're working on a feature that does not have a card, create a clear and concise name for the feature. That way we can reference who did what easily.
+
 ## Next Steps
 Now that you have gitflow setup, it's time to get into the code structure.
 

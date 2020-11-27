@@ -64,7 +64,7 @@ git:
                                                     # checkout out again during each "install" run. Be careful!
                                                     # Manual changes to these plugins will be overwritten.
 
-plugins:                                            #inital list of plugins for a basic stack
+plugins:                                            #initial list of plugins for a basic stack
  - anandpatel.wysiwygeditors
  - indikator.backend
  - inetis.dump
@@ -155,7 +155,7 @@ APP_KEY=
 Using your favorite database management tool, import the database associated with the git project. If you haven't created a database yet, do so. Your database needs to be completely clean to import, so make sure you drop all tables before importing
 
 ``` bash
-mysql -u root -p database_name < database_dump.sql # replace appropiate values
+mysql -u root -p database_name < database_dump.sql # replace appropriate values
 ```
 
 #### Set the values of `DB_*` to the database you imported 
@@ -184,7 +184,7 @@ composer install
 
 
 #### Setup Storage Folder 
-Extract the `storage.zip` (or `storage.tar.gz`) assoicated with the project in the root of the project folder. Do NOT overwrite `.gitignore` files.
+Extract the `storage.zip` (or `storage.tar.gz`) associated with the project in the root of the project folder. Do NOT overwrite `.gitignore` files.
 
 ``` bash
 # For zip files. You will be prompted for overwriting files. Choose 'No'
@@ -213,7 +213,7 @@ Copy everything in the brackets and paste it in the `.env` file under the `APP_K
 APP_KEY=base64:aashfjasdfhajshfusail=
 ```
 
-Congratulations! You have successfuly setup an existing OctoberCMS project!
+Congratulations! You have successfully setup an existing OctoberCMS project!
 
 ## Next Steps
 To make sure we work together well, We will setup :fab fa-git-alt: gitflow. If you haven't installed it yet, please refer to the [documentation](https://github.com/nvie/gitflow)

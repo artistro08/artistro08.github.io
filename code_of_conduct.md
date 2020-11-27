@@ -13,7 +13,7 @@ The naming conventions for classes in HTML have to make sense to the component/d
 
 
 ### IDs 
-ID attribues (e.g. `id="hero"`) should only be added if the selected div will be used in javascript or are apart of a module/component. Typically, component markups contain these and should stay in place unless you intend to replicate that functionality differently in the `📄script.js` file. 
+ID attributes (e.g. `id="hero"`) should only be added if the selected div will be used in javascript or are apart of a module/component. Typically, component markups contain these and should stay in place unless you intend to replicate that functionality differently in the `📄script.js` file. 
 
 > All IDs will have camelCase style casings. (e.g. `toggleButton`)
 
@@ -69,7 +69,7 @@ layout = "default"
 ```
 
  
-All components should be singular in reference unless they contain multiple entities. All components that are extended need their own folder.
+All components should be singular in reference unless they contain render a collection of items. All components that are extended need their own folder.
 
 > Components folders will be named in the camelCase format. (e.g. `blog` & `blogPost`).
 
@@ -86,6 +86,6 @@ When attaching components to `🟧pages`, `🟧partials`, or `🟧layouts`, you 
 
  ### Next Steps
 
- Now that you're up to speed on the Code of Conduct, you should be good to go to start theming! Be sure to check out the Resources page too for documentation on plugins we always use. 
+ Now that you're up to speed on the Code of Conduct, you should be good to go to start theming! Be sure to check out the Resources page too for documentation on plugins we always use, tips, and tricks. 
 
  [Resources :fas fa-arrow-right:](resources.md)
