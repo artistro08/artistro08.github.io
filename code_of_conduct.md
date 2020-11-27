@@ -50,7 +50,7 @@ Example of the folder structure below:
 
 ``` html
 └── 📁 partials                      
-    └── 📁 pluginName
+    └── 📁 pluginName <!-- camelCase styling -->
          └── 🟧default.htm 
 ```
 
