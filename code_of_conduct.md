@@ -74,5 +74,18 @@ All components should be singular in reference unless they contain multiple enti
 > Components folders will be named in the camelCase format. (e.g. `blog` & `blogPost`).
 
 
-> Components will __not__ contain the plugin name unless there is nothing else you can name it. For example, if you have a Blog plugin, it would make sense to name the components `blog` and `blogPost` but if you have a plugin named Records, you should name the component to the function that it is providing. (e.g. `team` or `sponsors`). 
+> `📁 component` folders will __not__ contain the plugin name unless there is nothing else you can name it. For example, if you have a Blog plugin, it would make sense to name the components `blog` and `blogPost` but if you have a plugin named Records, you should name the component to the function that it is providing. (e.g. `team` or `sponsors`). 
 
+### Attaching
+
+When attaching components to `🟧pages`, `🟧partials`, or `🟧layouts`, you need to make sure of the following:
+
+ - The component will be used directly and frequently wherever it is placed. For example, a component for SEO will go where the `🟧head.htm` partial is but not on the `🟧default.htm` layout because it is not being directly used there. 
+ - The component needs to be placed on a specific `🟧page`, `🟧partial`, or `🟧layout` because of how it works. For example, you have a SEO plugin you need to attach to the `🟧head.htm` partial, but it only works on the `🟧default.htm` layout. Check your plugin's documentation on where it needs to be. 
+
+
+ ### Next Steps
+
+ Now that you're up to speed on the Code of Conduct, you should be good to go to start theming! Be sure to check out the Resources page too for documentation on plugins we always use. 
+
+ [Resources :fas fa-arrow-right:](resources.md)
