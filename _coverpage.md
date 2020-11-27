@@ -6,4 +6,4 @@
 
 > A guideline on how theming will work based on our company policies. 
 
-[Get Started](#octobercms-stack-documentation)
+[Get Started](/docs/README.md)
