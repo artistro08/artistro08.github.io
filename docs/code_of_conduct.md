@@ -1,15 +1,15 @@
 # Code of Conduct
 
-This page is documentation on how naming conventions and coding structure should work out. Refer to each section for information on everything.
+This page contains documentation on how naming conventions and coding structure should work out. Refer to each section for information.
 
-?> This documentations uses case styling. Read more about them here: [Case Styles](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
+?> This documentations uses case styling. Read more about them here: [Case Styles :fas fa-external-link-alt:](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
 
 ## HTML
 
 ### Classes
-The naming conventions for classes in HTML have to make sense to the component/div you're designing. For example `class="hero"` should __ONLY__ target the `hero` div and other divs like it. Creating a combo class for `hero` on other pages works as well. for example `class="hero about-hero"`. 
+The naming conventions for classes in HTML have to make sense to the component/div you're designing. For example `class="hero"` should __ONLY__ target the `hero` div and other divs like it. Creating a combo class for `hero` on other pages works as well. For example `class="hero about-hero"`. 
 
-!> All classes will have kebab style casings. (e.g. hero-title)
+!> All classes will have kebab style casings. (e.g. `hero-title`)
 
 
 ### IDs 
@@ -85,11 +85,11 @@ When attaching components to `🟧pages`, `🟧partials`, or `🟧layouts`, you 
 
 
 ## Git Management
-Following the [GitFlow](/docs/gitflow.md) structure, you will be committing code your __per file change__. This ensures that all changes are separate for each commit. 
+Following the [GitFlow](/docs/gitflow.md) structure, you will be committing code your __per file change__. This ensures that all changes are separate for each commit and commits are easy to follow. 
 
-?> It's healthy to make as many commits as possible when you're working with with your code. If you
+?> It's healthy to make as many commits as possible when you're working with with your code.
 
-!> If you are 100% sure your feature is done, finish it, and move your Trello card into the "In Review" List. 
+!> If you are 100% sure your feature is done, finish it, and move the Trello card associated with your feature into the "In Review" List. 
 
 ## Next Steps
 

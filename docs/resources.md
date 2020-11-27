@@ -3,25 +3,25 @@ A list of resources I've found to help me get setup with OctoberCMS over the yea
 
 ## OctoberCMS Resources
 
-* [OctoberCMS Documentation](https://octobercms.com/docs/)
-* [OctoberCMS Forums](https://octobercms.com/forum)
-* [October Tricks](https://octobertricks.com/)
+* [OctoberCMS Documentation :fas fa-external-link-alt:](https://octobercms.com/docs/)
+* [OctoberCMS Forums :fas fa-external-link-alt:](https://octobercms.com/forum)
+* [October Tricks :fas fa-external-link-alt:](https://octobertricks.com/)
 
 ## Plugin Documentation
 
 Documentation links for the most frequent plugins that we use
 
-* [WYSIWYG Editors](https://octobercms.com/plugin/anandpatel-wysiwygeditors#documentation)
-* [Backend Plus](https://octobercms.com/plugin/indikator-backend#documentation)
-* [Twig Dump](https://octobercms.com/plugin/inetis-dump)
-* [Small Records](https://octobercms.com/plugin/janvince-smallrecords#documentation)
-* [Magic Forms](https://octobercms.com/plugin/martin-forms#documentation)
-* [ResponsiveImages](https://octobercms.com/plugin/offline-responsiveimages#documentation)
-* [Blog](https://github.com/rainlab/blog-plugin)
+* [WYSIWYG Editors :fas fa-external-link-alt:](https://octobercms.com/plugin/anandpatel-wysiwygeditors#documentation)
+* [Backend Plus :fas fa-external-link-alt:](https://octobercms.com/plugin/indikator-backend#documentation)
+* [Twig Dump :fas fa-external-link-alt:](https://octobercms.com/plugin/inetis-dump)
+* [Small Records :fas fa-external-link-alt:](https://octobercms.com/plugin/janvince-smallrecords#documentation)
+* [Magic Forms :fas fa-external-link-alt:](https://octobercms.com/plugin/martin-forms#documentation)
+* [ResponsiveImages :fas fa-external-link-alt:](https://octobercms.com/plugin/offline-responsiveimages#documentation)
+* [Blog :fas fa-external-link-alt:](https://github.com/rainlab/blog-plugin)
 * [Pages](https://github.com/rainlab/pages-plugin)
-* [Content Editor](https://octobercms.com/plugin/samuell-contenteditor#documentation)
-* [Image Resizer](https://octobercms.com/plugin/toughdeveloper-imageresizer#documentation)
-* [Twig Extensions](https://octobercms.com/plugin/vojtasvoboda-twigextensions#documentation)
+* [Content Editor :fas fa-external-link-alt:](https://octobercms.com/plugin/samuell-contenteditor#documentation)
+* [Image Resizer :fas fa-external-link-alt:](https://octobercms.com/plugin/toughdeveloper-imageresizer#documentation)
+* [Twig Extensions :fas fa-external-link-alt:](https://octobercms.com/plugin/vojtasvoboda-twigextensions#documentation)
 
 ## Various Resources
 
