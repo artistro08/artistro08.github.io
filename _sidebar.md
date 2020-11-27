@@ -1,0 +1,5 @@
+* [Getting Started](/docs/README.md)
+* [GitFlow](/docs/gitflow.md)
+* [Theme Structure](/docs/theme_structure.md)
+* [Code of Conduct](/docs/code_of_conduct.md)
+* [Resources](/docs/resources.md)
