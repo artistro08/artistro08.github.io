@@ -38,10 +38,107 @@ When  creating themes in OctoberCMS, use this structure:
 
 Below is a explanation on what files each folder will have and how each folder will be structured.
 
+## Assets
+
+The `📁assets` folder is where we will store all of our `#️⃣css`, `📄js`, and `🖼️img` files. The files in these folders will style and create the functionality of theme so it's imperative that we keep the file count small and easy to navigate. 
+
+### `📁CSS`
+The `📁css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`. If this file does not exist, you will need to create it. 
+
+>The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. 
+
+If you need to add other modules on the site that require a `#️⃣.css` file, add them here.
+For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `#️⃣.css` file in this folder.
+
+``` html
+└── 📁 css
+    └── #️⃣ styles.css                   <!-- main css file. do not change name. -->
+    └── #️⃣ jquery.fancybox.min.css      <!-- fancybox css file -->
+```
+
+Be sure to call it in your `🟧head.htm` partial as well. 
+
+``` twig
+...
+<link rel="stylesheet" href="{{ 'assets/css/jquery.fancybox.min.css'| theme }}>
+...
+```
+
+### `📁JS`
+The `📁js` folder should contain one main javascript file for the entire theme. This file name is called `📄script.js`. If this file does not exist, you will need to create it. 
+
+>The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. 
+
+If you need to add other modules on the site that require a `📄.js` file, add them here.
+For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `📄.js` file in this folder.
+
+``` html
+└── 📁 js
+    └── 📄 script.js                   <!-- main js file. do not change name. -->
+    └── 📄 jquery.fancybox.min.js      <!-- fancybox js file -->
+```
+
+Be sure to call it in your `🟧foot.htm` partial as well. 
+
+``` twig
+...
+<script src="{{ 'assets/js/jquery.fancybox.min.js'|theme }}>
+...
+```
+
+### `📁IMG`
+The `📁img` folder should contain all of the images associated with the theme.
+
+> This should not contain images that can be dynamically generated. More specifically, this folder should contain images that need to be rendered in each partial, and page directly.
+
+Example of the image file structure
+
+``` html
+└── 📁 img
+    └── 🖼️ logo.png
+    └── 🖼️ hero.jpg
+```
+
+## Content
+
+`🟧content` files are chunks of HTML code that are used to display static content across the site. __They do not use twig and are not dynamic.__ When creating content files, make sure they are in a folder relative to the page name. Example below:
+
+```
+└── 📁 content                      
+    ├── 📁 home
+    |     ├── 🟧hero-title.htm 
+    |     └── 🟧hero-descrption.htm 
+    └── 📁 about
+          ├── 🟧about-title.htm 
+          └── 🟧about-descrption.htm 
+```
+
+> Note: `🟧 content` files will not contain any HTML classes, divs, special html tags (e.g. `<article>`, `<section>`, etc). The only tags that these files are allowed to have are as follows:
+>
+> - `<p>`
+> - `<ul>`
+> - `<li>`
+> - `<span>`
+> - `<blockquote>`
+
+### Rendering
+To render those files, you will need to use the `{% content %}` tag like so:
+
+``` twig
+<div class="hero">
+    <div class="container hero-container">
+        {% content 'home/hero-title' %}
+        {% content 'home/hero-description' %}
+    </div>
+</div>
+```
+
+> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Ducmentation](https://octobercms.com/docs/markup/tag-content)
+
 
 ## Partials
 
-`🟧partials` are chunks of global, reusable code that is used throughout the theme.
+`🟧partials` are chunks of global, reusable code that is used throughout the theme rendered with the `{% partial %}` tag
 
 The `📁partials` folder should contain four main files that will be used across the theme. Those files are `🟧head.htm`, `🟧header.htm` `🟧foot.htm` and `🟧footer.htm`. If they do not exist, you will need to create them.
 
@@ -66,6 +163,7 @@ Here's an example of the folder structure below.
 This partial will contain all the code that goes in the `<head>` tag. This partial will __not__ contain the `<head>` tag tho. Example below:
 
 ``` twig
+{# Bootstrap & FancyBox Stuff #}
 <link rel="stylesheet" href="{{ 'assets/bootstrap/css/bootstrap.min.css'|theme }}"> 
 <link rel="stylesheet" href="{{ 'assets/css/jquery.fancybox.min.css'|theme }}">
 
@@ -175,6 +273,12 @@ This partial will contain the footer code for the site. This code will be presen
 </div>
 ```
 
+### Rendering
+In order to render a partial, use the following code. 
+
+``` twig
+{% partial 'head.htm' %}
+```
 
 ## Layouts
 Layouts are a combination of partials that make up the theme. We create layouts when we need to create a general structure on how the code should be rendered. Here's an example of how the `🟧default.htm` layout will look like:
@@ -198,65 +302,26 @@ Layouts are a combination of partials that make up the theme. We create layouts 
 </html>
 ```
 
+> Note, Use this a base on rendering layouts. Add partial where needed. Do not add direct code here. 
+
+### Rendering
+In order to render the layout, you'll need to assign the layout to the page you're work. Example below:
+
+``` twig
+title = "Home"
+url = "/"
+
+{# setting the layout here #}
+layout = "default"
+```
+
+
 > Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin](https://octobercms.com/plugin/rainlab-pages#documentation) for exapmle)
 
-## Assets
 
-The `assets` folder is where we will store all of our `#️⃣css`, `📄js`, and `🖼️img` files. These folders will style the website and create the theme so it's imperative that we keep them small and easy to navigate. 
 
-### `#️⃣CSS`
-The `📁css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`.
+## Next Steps
 
->The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. If this file does not exist, you will need to create it. 
+now that you have a general idea on how our themes will be structured, lets move on to the Code of Conduct
 
-If you need to add other modules on the site that require a `#️⃣.css` file, add them here.
-For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `#️⃣.css` file in this folder.
-
-``` html
-└── 📁 css
-    └── #️⃣ styles.css                   <!-- main css file. do not change name. -->
-    └── #️⃣ jquery.fancybox.min.css      <!-- fancybox css file -->
-```
-
-Be sure to call it in your `🟧head.htm` partial as well. 
-
-``` twig
-...
-<link rel="stylesheet" href="{{ 'assets/css/jquery.fancybox.min.css'| theme }}>
-...
-```
-
-### `📄JS`
-The `📁js` folder should contain one main javascript file for the entire theme. This file name is called `📄script.js`.
-
->The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. If this file does not exist, you will need to create it. 
-
-If you need to add other modules on the site that require a `📄.js` file, add them here.
-For example, if you would like to add [jquery.fancybox](https://fancyapps.com/), add this `📄.js` file in this folder.
-
-``` html
-└── 📁 css
-    └── 📄 script.js                   <!-- main js file. do not change name. -->
-    └── 📄 jquery.fancybox.min.js      <!-- fancybox js file -->
-```
-
-Be sure to call it in your `🟧foot.htm` partial as well. 
-
-``` twig
-...
-<script src="{{ 'assets/js/jquery.fancybox.min.js'|theme }}>
-...
-```
-
-### `🖼️IMG`
-The `📁img` folder should contain all of the images associated with the theme.
-
-> This should not contain images that can be dynamically generated. More specifically, this folder should contain images that are being rendered in each partial, and page.
-
-Example of the image file structure
-
-``` html
-└── 📁 img
-    └── 🖼️ logo.png
-    └── 🖼️ hero.jpg
-```
+[Code of Conduct :fas fa-arrow-right:](/code_of_conduct.md)
