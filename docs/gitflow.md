@@ -2,7 +2,9 @@
 
 In order to manage code and prevent as many merge conflicts as possible (trust me they are a pain in the a-- i mean behind) We will use gitflow to manage all code. 
 
-Gitflow uses `feature` branches to manage code based on what you're working on. For example, if you would like to work on a contact page the following feature would be something like `feature/contact-page-updates`. We create these features to mitigate as much confusion as possible. With our stack, these features are paired with Trello Cards, more particularly the name of the card. Each card that we have in Trello should be paired with a feature. There are also other branches like `releases` for master and (or main if you're using GitHub), `hotfix` for simple fixes. Gitflow automatically versions everything out with a 3 decimal layout. (e.g: `1.0.0`)
+Gitflow uses `feature` branches to manage code based on what you're working on. For example, if you would like to work on a contact page the following feature would be something like `feature/contact-page-updates`.
+
+?>We create these features to mitigate as much confusion as possible. With our stack, these features are paired with Trello Cards, more particularly the name of the card. Each card that we have in Trello should be paired with a feature. There are also other branches like `releases` for master and (or main if you're using GitHub), `hotfix` for simple fixes. Gitflow automatically versions everything out with a 3 decimal layout. (e.g: `1.0.0`)
 
 ## Installing Gitflow
 
