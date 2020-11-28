@@ -1,5 +1,5 @@
 # Resources
-A list of resources I've found to help me get setup with OctoberCMS over the years
+A list of resources I've found to help me get setup with OctoberCMS over the years.
 
 </br>
 

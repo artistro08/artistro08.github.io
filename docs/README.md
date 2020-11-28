@@ -1,14 +1,14 @@
 # Getting Started
 
-This is a bible for how OctoberCMS should be handled. 
+This is a guideline for how OctoberCMS should be handled. 
 
 
 
-!> Use this documentation as a strict guide on how code should be managed in OctoberCMS. This documentation is provided to make sure code can be created quickly and efficiently when working with others.
+!> Use this documentation as a guide on how code should be managed in OctoberCMS. This documentation is provided to make sure code can be created quickly and efficiently when working with others.
 
-?> This guide assumes that you already have a local or virtual server setup with git and a basic understanding of git. If you do not, I recommend you get [:fab fa-github:laravel/valet](https://github.com/laravel/valet) setup or [:fab fa-github:cpriego/valet-linux](https://github.com/cpriego/valet-linux) to get a local server started. You'll also need to [install git :fas fa-external-link-alt:](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [read the git documentation :fas fa-external-link-alt:](https://git-scm.com/doc)
+?> This guide assumes that you already have a local or virtual server setup and a basic understanding of git. If you do not, I recommend you get [:fab fa-github:laravel/valet](https://github.com/laravel/valet) setup or [:fab fa-github:cpriego/valet-linux](https://github.com/cpriego/valet-linux) to get a local server started. You'll also need to [install git :fas fa-external-link-alt:](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [read the git documentation :fas fa-external-link-alt:](https://git-scm.com/doc)
 
-?> You will need to setup composer on your machine. Composer requires PHP. There are plenty of guides on how to setup composer and php online. [Google :fas fa-external-link-alt:](https://www.google.com/search?q=how+to+setup+php+and+composer) is your friend
+?> You will need to setup composer on your machine. Composer requires PHP. There are plenty of guides on how to setup composer and PHP online. [Google :fas fa-external-link-alt:](https://www.google.com/search?q=how+to+setup+php+and+composer) is your friend
 
 </br>
 
@@ -32,7 +32,7 @@ git add README.md
 git commit -m "Initialize repository"
 git branch -M main ## if you're using GitHub
 git remote add origin https://github.com/username/repository.git 
-git push -u origin master
+git push -u origin master ## replace 'master' with 'main' if you're using GitHub
 ```
 
 The above will create a `october.yaml` file for setup, create a new branch, and push it to your git provider. 
@@ -91,14 +91,15 @@ mail:
     driver: log
 
 ```
-
-Once done, in your terminal, run this command to setup OctoberCMS.
+<br>
+Once done, in your terminal, run this command in the root of the folder where the `october.yaml` file is to setup OctoberCMS.
 
 ``` bash
 october install
 ```
+<br>
 
-Congratulations! You have a fully setup OctoberCMS repository. __Go build something amazing!__
+__Congratulations__! You have a fully setup OctoberCMS repository. __Go build something amazing!__
 
 ?> Don't forget to commit your changes with `git add .` & `git commit` 
 
@@ -119,7 +120,7 @@ if you are using HTTPS:
 git clone https://github.com/username/repository.git
 ```
 
-Now we will switch the branch to develop
+Now we will switch the branch to __develop__.
 ``` bash
 git checkout develop
 ```
@@ -135,20 +136,20 @@ cp .env.example .env
 ```
 
 #### Set the `APP_URL` 
-Open the `.env` file you just created with you favorite text editor and find this line
+Open the `.env` file you just created with you favorite text editor and find this line.
 
 ``` env
 <!-- this depends on the repository -->
 APP_URL=example.test 
 ```
 
-Change it to whatever you need it to be
+Change it to whatever you need it to be.
 ``` env
 APP_URL=devingreen.test 
 ```
 
 #### Delete the value for `APP_KEY`. 
-With the `.env` file still open, find this line 
+With the `.env` file still open, find this line.
 
 ``` env
 APP_KEY=Change me!!!
@@ -161,7 +162,9 @@ APP_KEY=
 ```
 
 #### Import The Database
-Using your favorite database management tool, import the database associated with the git project. If you haven't created an empty database yet, do so. Your database needs to be completely clean to import, so make sure you __drop all tables__ before importing
+Using your favorite database management tool, import the database associated with the git project. If you haven't created an empty database yet, do so. 
+
+?>Your database needs to be completely clean to import, so make sure you __drop all tables__ before importing
 
 ``` bash
 mysql -u root -p database_name < database_dump.sql # replace appropriate values
@@ -176,15 +179,15 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Update the following lines to the database that you've imported to. 
+Update those lines to the database that you've imported to. 
 
 ``` env
 DB_DATABASE=devingreen
 DB_USERNAME=root
-DB_PASSWORD=SpidermanLivesAgain <!-- your root password, or whatever you've setup on your system -->
+DB_PASSWORD=SpidermanLivesAgain <!-- your root password, or whatever you have setup on your system -->
 ```
 
-#### Install the Application
+#### Install Composer Packages
 Install all required vendor files needed for the OctoberCMS install to run
 
 ``` bash
@@ -193,7 +196,7 @@ composer install
 
 
 #### Setup Storage Folder 
-Extract the `storage.zip` (or `storage.tar.gz`) associated with the project in the root of the project folder. Do NOT overwrite `.gitignore` files.
+Extract the `storage.zip` (or `storage.tar.gz`) file associated with the project in the root of the project folder. Do NOT overwrite `.gitignore` files.
 
 ``` bash
 # For zip files. You will be prompted for overwriting files. Choose 'No'
@@ -205,7 +208,7 @@ tar -zxvf --keep-old-files storage.tar.gz
 
 
 #### Generate an `APP_KEY`
-We need to generate an `APP_KEY` to insert into the `.env` file. Run the following command to do so.
+We need to generate an `APP_KEY` to insert into the `.env` file. Run the following command in the root folder to do so.
 
 ``` bash
 php artisan key:generate
@@ -222,11 +225,13 @@ Copy everything in the brackets `[...]` and paste it in the `.env` file under th
 APP_KEY=base64:aashfjasdfhajshfusail=
 ```
 
-Congratulations! You have successfully setup an existing OctoberCMS project!
+<br>
+
+__Congratulations__! You have successfully setup an existing OctoberCMS project!
 
 </br>
 
 ## Next Steps
-To make sure we work together well, We will setup :fab fa-git-alt: gitflow. If you haven't installed it yet, please refer to the [documentation](https://github.com/nvie/gitflow)
+To make sure we work together well, We will setup gitflow. Let's get started.
 
 [Gitflow :fas fa-arrow-right:](/docs/gitflow)
