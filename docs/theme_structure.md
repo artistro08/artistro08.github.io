@@ -207,7 +207,7 @@ layout = "default"  {# Layout the page is using #}
 </div>
 ```
 
-!> Partials will only be rendered on a page if they will be used across 3 or more pages. 
+!> Partials will only be rendered on a page if they will be used across 2 or more pages. If this is the case, consider displaying it in a `🟧layout`
 
 ### Rendering
 
