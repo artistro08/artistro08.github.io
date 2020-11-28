@@ -1,11 +1,15 @@
 # Resources
 A list of resources I've found to help me get setup with OctoberCMS over the years
 
+</br>
+
 ## OctoberCMS Resources
 
 * [OctoberCMS Documentation :fas fa-external-link-alt:](https://octobercms.com/docs/)
 * [OctoberCMS Forums :fas fa-external-link-alt:](https://octobercms.com/forum)
 * [October Tricks :fas fa-external-link-alt:](https://octobertricks.com/)
+
+</br>
 
 ## Plugin Documentation
 
@@ -22,6 +26,8 @@ Documentation links for the most frequent plugins that we use
 * [Content Editor :fas fa-external-link-alt:](https://octobercms.com/plugin/samuell-contenteditor#documentation)
 * [Image Resizer :fas fa-external-link-alt:](https://octobercms.com/plugin/toughdeveloper-imageresizer#documentation)
 * [Twig Extensions :fas fa-external-link-alt:](https://octobercms.com/plugin/vojtasvoboda-twigextensions#documentation)
+
+</br>
 
 ## Various Resources
 
