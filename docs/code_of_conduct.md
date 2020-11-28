@@ -19,6 +19,8 @@ ID attributes (e.g. `id="hero"`) should only be added if the selected div will b
 
 !> All IDs will have camelCase style casings. (e.g. `toggleButton`)
 
+?> If you need to use javascript to target multiple divs using the same class, that's fine too. 
+
 </br>
 
 ## CSS
@@ -48,7 +50,9 @@ CSS styles in the the file should be structured as per the standard. example bel
 
 ## Components
 
-Components are pieces of code that create the structure of plugins. These reside in the `📁 plugins/*author*/*plugin_name*/components` folder (replace things in the asterisks accordingly) and can be copied into the `📁 partials` folder to change the structure. Each component has it's own folder and a `default.htm` file. 
+Components are pieces of code that create the structure of plugins. These reside in the `📁plugins/*author*/*plugin_name*/components` folder (replace things in the asterisks accordingly) and can be copied into the `📁partials` folder to change the markup structure.
+
+Each component has it's own folder and a `default.htm` file. 
 
 
 
@@ -71,7 +75,13 @@ title = "Home"
 url = "/"
 layout = "default"
 
-[blog blogPosts]
+{# the first word is referencing the component. #}
+{# the second word is referencing the alias     #}
+[blogPosts blog]
+postsPerPage = "5" {# config item #}
+==
+{% component 'blog' %} 
+
 ```
 
  
@@ -97,12 +107,12 @@ Following the [GitFlow](/docs/gitflow.md) structure, you will be committing code
 
 ?> It's healthy to make as many commits as possible when you're working with with your code.
 
-!> If you are 100% sure your feature is done, finish it, and move the Trello card associated with your feature into the "In Review" List. 
+!> If you are 100% sure your feature is done, finish it, and move the :fab fa-trello: Trello card associated with your feature into the "In Review" List. 
 
 </br>
 
 ## Next Steps
 
-Now that you're up to speed on the Code of Conduct, you should be good to go to start theming! Be sure to check out the Resources page too for documentation on plugins we always use, tips, and tricks. 
+Now that you're up to speed on the Code of Conduct, you should be good to go to start theming! Be sure to check out the Resources page for documentation on plugins we that always use. There are also tips, and tricks on this page. 
 
 [Resources :fas fa-arrow-right:](/docs/resources.md)
