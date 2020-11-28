@@ -4,6 +4,8 @@ This page contains documentation on how naming conventions and coding structure 
 
 ?> This documentations uses case styling. Read more about them here: [Case Styles :fas fa-external-link-alt:](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
 
+</br>
+
 ## HTML
 
 ### Classes
@@ -16,6 +18,8 @@ The naming conventions for classes in HTML have to make sense to the component/d
 ID attributes (e.g. `id="hero"`) should only be added if the selected div will be used in javascript or are apart of a module/component. Typically, component markups contain these and should stay in place unless you intend to replicate that functionality differently in the `📄script.js` file. 
 
 !> All IDs will have camelCase style casings. (e.g. `toggleButton`)
+
+</br>
 
 ## CSS
 CSS styles in the the file should be structured as per the standard. example below: 
@@ -39,6 +43,8 @@ CSS styles in the the file should be structured as per the standard. example bel
 
 ?> It is encouraged, but not required that you leave comments in the css file for quick references in the code editor. 
 
+
+</br>
 
 ## Components
 
@@ -84,12 +90,16 @@ When attaching components to `🟧pages`, `🟧partials`, or `🟧layouts`, you 
  - The component needs to be placed on a specific `🟧page`, `🟧partial`, or `🟧layout` because of how it works. For example, you have a SEO plugin you need to attach to the `🟧head.htm` partial, but it only works on the `🟧default.htm` layout. Check your plugin's documentation on where it needs to be. 
 
 
+</br>
+
 ## Git Management
 Following the [GitFlow](/docs/gitflow.md) structure, you will be committing code your __per file change__. This ensures that all changes are separate for each commit and commits are easy to follow. 
 
 ?> It's healthy to make as many commits as possible when you're working with with your code.
 
 !> If you are 100% sure your feature is done, finish it, and move the Trello card associated with your feature into the "In Review" List. 
+
+</br>
 
 ## Next Steps
 

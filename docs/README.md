@@ -10,9 +10,13 @@ This is a bible for how OctoberCMS should be handled.
 
 ?> You will need to setup composer on your machine. Composer requires PHP. There are plenty of guides on how to setup composer and php online. [Google :fas fa-external-link-alt:](https://www.google.com/search?q=how+to+setup+php+and+composer) is your friend
 
+</br>
+
 ## Setting Up
 
 There are two ways to setup your repository for OctoberCMS. You can start from scratch or you can setup an existing one. 
+
+</br>
 
 ### From Scratch
 
@@ -97,6 +101,8 @@ october install
 Congratulations! You have a fully setup OctoberCMS repository. __Go build something amazing!__
 
 ?> Don't forget to commit your changes with `git add .` & `git commit` 
+
+</br>
 
 ### Existing Setup
 
@@ -217,6 +223,8 @@ APP_KEY=base64:aashfjasdfhajshfusail=
 ```
 
 Congratulations! You have successfully setup an existing OctoberCMS project!
+
+</br>
 
 ## Next Steps
 To make sure we work together well, We will setup :fab fa-git-alt: gitflow. If you haven't installed it yet, please refer to the [documentation](https://github.com/nvie/gitflow)
