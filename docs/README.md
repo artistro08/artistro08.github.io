@@ -6,7 +6,9 @@ This is a bible for how OctoberCMS should be handled.
 
 !> Use this documentation as a strict guide on how code should be managed in OctoberCMS. This documentation is provided to make sure code can be created quickly and efficiently when working with others.
 
-?> This guide assumes that you already have a local or virtual server setup. If you do not, I recommend you get [:fab fa-github:laravel/valet](https://github.com/laravel/valet) setup or [:fab fa-github:cpriego/valet-linux](https://github.com/cpriego/valet-linux) to get a local server started.
+?> This guide assumes that you already have a local or virtual server setup with git and a basic understanding of git. If you do not, I recommend you get [:fab fa-github:laravel/valet](https://github.com/laravel/valet) setup or [:fab fa-github:cpriego/valet-linux](https://github.com/cpriego/valet-linux) to get a local server started. You'll also need to [install git :fas fa-external-link-alt:](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [read the git documentation :fas fa-external-link-alt:](https://git-scm.com/doc)
+
+?> You will need to setup composer on your machine. Composer requires PHP. There are plenty of guides on how to setup composer and php online. [Google :fas fa-external-link-alt:](https://www.google.com/search?q=how+to+setup+php+and+composer) is your friend
 
 ## Setting Up
 
@@ -32,7 +34,7 @@ git push -u origin master
 The above will create a `october.yaml` file for setup, create a new branch, and push it to your git provider. 
 
 #### OctoberCMS Setup
-Once you've setup the repository, you'll need to add a config to the `october.yaml` file you created in the first step. Use this as a base. <br/>
+Once you've setup the repository, you'll need to add settings to configure the `october.yaml` file you created in the first step. Use this as a base. <br/>
 
 ``` yaml
 app:
@@ -92,7 +94,9 @@ Once done, in your terminal, run this command to setup OctoberCMS.
 october install
 ```
 
-Congratulations! You have a fully setup OctoberCMS repository. Go build something amazing
+Congratulations! You have a fully setup OctoberCMS repository. __Go build something amazing!__
+
+?> Don't forget to commit your changes with `git add .` & `git commit` 
 
 ### Existing Setup
 
@@ -128,7 +132,8 @@ cp .env.example .env
 Open the `.env` file you just created with you favorite text editor and find this line
 
 ``` env
-APP_URL=example.test # this depends on the repository
+<!-- this depends on the repository -->
+APP_URL=example.test 
 ```
 
 Change it to whatever you need it to be
@@ -150,7 +155,7 @@ APP_KEY=
 ```
 
 #### Import The Database
-Using your favorite database management tool, import the database associated with the git project. If you haven't created a database yet, do so. Your database needs to be completely clean to import, so make sure you drop all tables before importing
+Using your favorite database management tool, import the database associated with the git project. If you haven't created an empty database yet, do so. Your database needs to be completely clean to import, so make sure you __drop all tables__ before importing
 
 ``` bash
 mysql -u root -p database_name < database_dump.sql # replace appropriate values
@@ -165,12 +170,12 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-update the following lines to the database that you've imported to. 
+Update the following lines to the database that you've imported to. 
 
 ``` env
 DB_DATABASE=devingreen
 DB_USERNAME=root
-DB_PASSWORD=SpidermanLivesAgain # your root password, or whatever you've setup on your system
+DB_PASSWORD=SpidermanLivesAgain <!-- your root password, or whatever you've setup on your system -->
 ```
 
 #### Install the Application
@@ -189,7 +194,7 @@ Extract the `storage.zip` (or `storage.tar.gz`) associated with the project in t
 unzip storage.zip
 
 # For tar files
-tar -zxvf --keep-old-files storage.zip
+tar -zxvf --keep-old-files storage.tar.gz
 ```
 
 
@@ -205,7 +210,7 @@ It should output something like:
 [base64:aashfjasdfhajshfusail=]
 ```
 
-Copy everything in the brackets and paste it in the `.env` file under the `APP_KEY` value
+Copy everything in the brackets `[...]` and paste it in the `.env` file under the `APP_KEY` value
 
 ```
 APP_KEY=base64:aashfjasdfhajshfusail=
@@ -216,4 +221,4 @@ Congratulations! You have successfully setup an existing OctoberCMS project!
 ## Next Steps
 To make sure we work together well, We will setup :fab fa-git-alt: gitflow. If you haven't installed it yet, please refer to the [documentation](https://github.com/nvie/gitflow)
 
-[Gitflow :fas fa-arrow-right:](/gitflow)
+[Gitflow :fas fa-arrow-right:](/docs/gitflow)
