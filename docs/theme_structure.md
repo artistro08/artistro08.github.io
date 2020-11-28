@@ -1,7 +1,7 @@
 # Theme Structure
 The following is an extensive guide on how themes should work in OctoberCMS
 
-?>This guide assumes that you have a basic understanding of html, css, twig, and OctoberCMS theming. If you do not, I suggest you read the documentation below.
+?>This guide assumes that you have a basic understanding of `html`, `css`, `twig`, and OctoberCMS theming. If you do not, I suggest you read the documentation below.
 <br><br> [MDN Docs on HTML :fas fa-external-link-alt:](https://developer.mozilla.org/en-US/docs/Web/HTML)
 <br>[MDN Docs on CSS :fas fa-external-link-alt:](https://developer.mozilla.org/en-US/docs/Web/CSS) 
 <br> [Symphony's Documentation on Twig :fas fa-external-link-alt:](https://twig.symfony.com/doc/2.x/)
@@ -15,9 +15,9 @@ When  creating themes in OctoberCMS, use this structure:
     |     ├── 📁 css
     |     |     └── #️⃣ styles.css        <!-- main css file. do not change name. -->
     |     ├──  📁 js
-    |     |     └── 📄 script.js         <!-- main css file. do not change name. -->
+    |     |     └── 📄 script.js         <!-- main js file. do not change name. -->
     |     └──  📁 img
-    |     |     └── 🖼️ image.jpg         <!-- all images go gere -->
+    |     |     └── 🖼️ image.jpg         <!-- all theme images go gere -->
     ├── 📁 content                       <!-- how all content will be structured. -->
     |     ├── 📁 page_name
     |     |     └── 🟧content_name.htm 
@@ -27,7 +27,7 @@ When  creating themes in OctoberCMS, use this structure:
     |     ├── 🟧 default.htm             <!-- main layout file. do not change name. -->
     |     └── 🟧 page.htm                <!-- main layout file for pages. do not change name. -->
     ├── 📁 pages
-    |     └── 🟧 page_name.htm           <!-- main layout file for pages. do not change name. -->
+    |     └── 🟧 page_name.htm           <!-- Page -->
     └── 📁 partials
           ├── 🟧 head.htm                <!-- head code for pages. do not change name. -->
           ├── 🟧 header.htm              <!-- navigation code for pages. do not change name. -->
@@ -43,7 +43,7 @@ Below is a explanation on what files each folder will have and how each folder w
 
 The `📁assets` folder is where we will store all of our `#️⃣css`, `📄js`, and `🖼️img` files. The files in these folders will style and create the functionality of theme so it's imperative that we keep the file count small and easy to navigate. 
 
-### `CSS`
+### CSS
 The `📁css` folder should contain one main file to style the entire theme. This file name is called `#️⃣styles.css`. If this file does not exist, you will need to create it. 
 
 !>The name of this file __will not be changed__ and we will not add any other css files here unless they are modules or extensions. 
@@ -65,7 +65,7 @@ Be sure to call it in your `🟧head.htm` partial as well.
 ...
 ```
 
-### `JS`
+### JS
 The `📁js` folder should contain one main javascript file for the entire theme. This file name is called `📄script.js`. If this file does not exist, you will need to create it. 
 
 !>The name of this file __will not be changed__ and we will not add any other js files here unless they are modules or extensions. 
@@ -87,7 +87,7 @@ Be sure to call it in your `🟧foot.htm` partial as well.
 ...
 ```
 
-### `IMG`
+### IMG
 The `📁img` folder should contain all of the images associated with the theme.
 
 ?> This should not contain images that can be dynamically generated. More specifically, this folder should contain images that need to be rendered in each partial, and page directly.
@@ -135,6 +135,83 @@ To render those files, you will need to use the `{% content %}` tag like so:
 
 ?> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation :fas fa-external-link-alt:](https://octobercms.com/docs/markup/tag-content)
 
+
+## Layouts
+Layouts are a combination of partials that make up the theme. We create layouts when we need to create a general structure on how the code should be rendered. Here's an example of how the `🟧default.htm` layout will look like:
+
+``` twig
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'head' %}
+    </head>
+    <body>
+        {% partial 'header' %}
+
+        {# Where page content will be rendered #}
+        {% page %} 
+
+        {% partial 'footer' %}
+
+        {% partial 'foot' %}
+    </body>
+</html>
+```
+
+?> Note: Use this a base on rendering layouts. Add partial where needed. Do not add direct code here. 
+
+### Rendering
+In order to render the layout, you'll need to assign the layout to the page you're work. Example below:
+
+``` twig
+title = "Home"
+url = "/"
+
+{# setting the layout here #}
+layout = "default"
+```
+
+
+!> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin :fas fa-external-link-alt:](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
+
+## Pages
+
+`🟧pages` are exactly that. Each page has an ID which is associated with the filename. For example, if you create a page named `🟧home.htm` in the `📁pages` folder, the ID of the page will be `home`. 
+
+`🟧pages` require layouts to be styled accordingly. They also accept [`🟧components`](/docs/code_of_conduct#components) can be used to display [`🟧partials`](#partials) & [`🟧content`](#content) as well.
+
+### Creating A Page
+
+To setup a page, create a `.htm` file in the `📁pages` folder and use the following markup as a base:
+
+``` twig
+title = "Home"      {# title of the page. Displayed in the backend #}
+url = "/"           {# Where the page will be accessible in the browser #}
+layout = "default"  {# Layout the page is using #}
+==                  {# Marks the beginning of HTML #}
+
+<div class="hero">
+    <div class="hero-container">
+        <h3>
+            {# renders the page title onto the page #}
+            {{ this.page.title }} 
+        </h3>
+        <p>A Cool Hero</p>
+
+        {# Displaying a partial #}
+        {% partial 'homePageAlert' %}
+
+        {# displaying a content file #}
+        {% content 'home/hero-content.htm' %}
+    </div>
+</div>
+```
+
+!> Partials will only be rendered on a page if they will be used across 2 or more pages. If this is the case, consider displaying it in a `🟧layout`
+
+### Rendering
+
+To render page content, you need to use the `{% page %}` tag in a [`🟧layout`](#layouts). 
 
 ## Partials
 
@@ -278,44 +355,6 @@ In order to render a partial, use the following code.
 ``` twig
 {% partial 'head.htm' %}
 ```
-
-## Layouts
-Layouts are a combination of partials that make up the theme. We create layouts when we need to create a general structure on how the code should be rendered. Here's an example of how the `🟧default.htm` layout will look like:
-
-``` twig
-<!DOCTYPE html>
-<html>
-    <head>
-        {% partial 'head' %}
-    </head>
-    <body>
-        {% partial 'header' %}
-
-        {# Where page content will be rendered #}
-        {% page %} 
-
-        {% partial 'footer' %}
-
-        {% partial 'foot' %}
-    </body>
-</html>
-```
-
-?> Note: Use this a base on rendering layouts. Add partial where needed. Do not add direct code here. 
-
-### Rendering
-In order to render the layout, you'll need to assign the layout to the page you're work. Example below:
-
-``` twig
-title = "Home"
-url = "/"
-
-{# setting the layout here #}
-layout = "default"
-```
-
-
-!> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin :fas fa-external-link-alt:](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
 
 
 
