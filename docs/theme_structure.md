@@ -7,6 +7,8 @@ The following is an extensive guide on how themes should work in OctoberCMS
 <br> [Symphony's Documentation on Twig :fas fa-external-link-alt:](https://twig.symfony.com/doc/2.x/)
 <br> [OctoberCMS Theming Docs :fas fa-external-link-alt:](https://octobercms.com/docs/cms/themes)
 
+</br>
+
 ## Initial Structure
 When  creating themes in OctoberCMS, use this structure:
 ``` html
@@ -38,6 +40,8 @@ When  creating themes in OctoberCMS, use this structure:
 !>Note: this is a strict guideline. Do not change the names of these files or folders under any circumstance. These are put in place to make sure everyone knows where the files are and how to get to them, thus creating a workable, consistent coding environment.
 
 Below is a explanation on what files each folder will have and how each folder will be structured.
+
+</br>
 
 ## Assets
 
@@ -100,6 +104,8 @@ Example of the image file structure
     └── 🖼️ hero.jpg
 ```
 
+</br>
+
 ## Content
 
 `🟧content` files are chunks of HTML code that are used to display static content across the site. __They do not use twig and are not dynamic.__ When creating content files, make sure they are in a folder relative to the page name. Example below:
@@ -135,6 +141,7 @@ To render those files, you will need to use the `{% content %}` tag like so:
 
 ?> Note, when using plugins associated with `🟧content` files, make sure you maintain this structure. This makes it easy for clients to go and make edits and easy for us to find files. if you would like to know more on how content files work, read the [OctoberCMS Documentation :fas fa-external-link-alt:](https://octobercms.com/docs/markup/tag-content)
 
+</br>
 
 ## Layouts
 Layouts are a combination of partials that make up the theme. We create layouts when we need to create a general structure on how the code should be rendered. Here's an example of how the `🟧default.htm` layout will look like:
@@ -174,6 +181,8 @@ layout = "default"
 
 !> Note: You should only need to create a new layout if the entire structure of the the site will change, or a layout requires the use of a plugin (like the [Pages Plugin :fas fa-external-link-alt:](https://octobercms.com/plugin/rainlab-pages#documentation) for example)
 
+</br>
+
 ## Pages
 
 `🟧pages` are exactly that. Each page has an ID which is associated with the filename. For example, if you create a page named `🟧home.htm` in the `📁pages` folder, the ID of the page will be `home`. 
@@ -212,6 +221,8 @@ layout = "default"  {# Layout the page is using #}
 ### Rendering
 
 To render page content, you need to use the `{% page %}` tag in a [`🟧layout`](#layouts). 
+
+</br>
 
 ## Partials
 
