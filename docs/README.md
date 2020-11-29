@@ -92,6 +92,7 @@ mail:
 
 ```
 <br>
+
 Once done, in your terminal, run this command in the root of the folder where the `october.yaml` file is to setup OctoberCMS.
 
 ``` bash
